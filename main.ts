@@ -136,8 +136,10 @@ namespace dfplayer {
     //% blockId="setVolume" block="set volume(0~48):%volume"
     //% weight=70 blockGap=20 volume.min=0 volume.max=48
     export function setVolume(volume:number):void{
-        para2=volume
-        sendData()
+        let myBuff = pins.createBuffer(1);
+        myBuff.setNumber(NumberFormat.UInt8BE, 0, volume)           
+        serial.writeBuffer(myBuff)
+        basic.pause(100)
     }
 
     function sendData():void{
