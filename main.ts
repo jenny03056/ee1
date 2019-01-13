@@ -136,13 +136,7 @@ namespace dfplayer {
     //% blockId="setVolume" block="set volume(0~48):%volume"
     //% weight=70 blockGap=20 volume.min=0 volume.max=48
     export function setVolume(volume:number):void{
-        CMD=0x06
-        para1=0
         para2=volume
-        dataArr[3]=CMD
-        dataArr[5] = para1
-        dataArr[6] = para2
-        checkSum()
         sendData()
     }
 
