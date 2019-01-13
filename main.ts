@@ -137,8 +137,13 @@ namespace dfplayer {
     //% weight=70 blockGap=20 volume.min=0 volume.max=48
     export function setVolume(volume:number):void{
         let myBuff = pins.createBuffer(1);
-        myBuff.setNumber(NumberFormat.UInt8BE, 0, volume)           
-        serial.writeBuffer(myBuff)
+     //   myBuff.setNumber(NumberFormat.UInt8BE, 0, volume)           
+    //   serial.writeBuffer(myBuff)
+        if (volume < 10 ) {
+          serial.writeBuffer("90,90,90,90,90,90,90,90,F#")  
+        } else {
+          serial.writeBuffer("90,90,90,90,90,90,90,90,B#")              
+        }
         basic.pause(100)
     }
 
