@@ -1,0 +1,286 @@
+<category id="category_ljj" name="Liou">
+	<category id="category_ljj_tools" name="Tools">
+		<block type="tools_convert_str_int">
+			<value name="MY_VAR">
+				<block type="text">
+					<field name="TEXT"></field>
+				</block>
+			</value>
+		</block>
+	</category>
+	<category id="category_ljj_modules" name="Modules">
+		<category id="category_mp3" name="MP3">
+			<block type="mp3_set_pins">
+				<value name="RX_PIN">
+					<block type="math_number">
+						<field name="NUM">2</field>
+				</block>
+				</value>
+			</block>
+			<block type="mp3_playfolder">
+				<value name="FOLDER">
+					<block type="math_number">
+						<field name="NUM">1</field>
+					</block>
+				</value>
+				<value name="MP3_INDEX">
+					<block type="math_number">
+						<field name="NUM">1</field>
+					</block>
+				</value>
+			</block>
+			<block type="mp3_execute"></block>
+			<block type="mp3_volume">
+				<value name="VOLUME">
+					<block type="math_number">
+						<field name="NUM">0</field>
+					</block>
+				</value>
+			</block>
+			<block type="mp3_loop_folder">
+				<value name="FOLDER">
+					<block type="math_number">
+						<field name="NUM">1</field>
+					</block>
+				</value>
+			</block>
+			<block type="mp3_loop_options"></block>
+			<block type="mp3_random"></block>
+		</category>
+        <category id="category_ir" name="InfraRed">
+			<block type="ir_receiver_pin"></block>
+			<block type="ir_event"></block>
+            <block type="ir_received_type"></block>
+            <block type="ir_received_code"></block>
+        </category>
+	</category>
+	<category id="category_liou_robot" name="Robot">
+		<category id="category_maqueen" name="Maqueen">
+			<block type="maqueen_head_light"></block>
+			<block type="maqueen_move_car">
+				<value name="SPEED">
+					<block type="math_number">
+					<field name="NUM">0</field>
+					</block>
+				</value>
+			</block>
+			<block type="maqueen_move_motor">
+				<value name="SPEED">
+					<block type="math_number">
+						<field name="NUM">0</field>
+						</block>
+				</value>
+			</block>
+			<block type="maqueen_servo">
+				<value name="ANGLE">
+					<block type="math_number">
+						<field name="NUM">0</field>
+						</block>
+				</value>
+			</block>
+			<block type="maqueen_button"></block>
+            <block type="maqueen_sonar"></block>
+            <block type="maqueen_line_follower"></block>
+			<block type="maqueen_ir_event"></block>
+			<block type="maqueen_ir_remote_received1"></block>
+			<block type="maqueen_ir_remote_received2">
+                <value name="IR_SIGNAL">
+                    <block type="text">
+                        <field name="TEXT"></field>
+                    </block>
+                </value>
+            </block>
+            <block type="maqueen_ir_received_type"></block>
+			<block type="maqueen_ir_received_code"></block>
+            <block type="maqueen_tone"></block>
+            <block type="maqueen_no_tone"></block>
+            <block type="maqueen_custom_tone">
+                <value name="FREQ">
+                    <block type="math_number">
+                        <field name="NUM">255</field>
+                    </block>
+                </value>
+                <value name="DURATION">
+                    <block type="math_number">
+                        <field name="NUM">300</field>
+                    </block>
+                </value>
+            </block>
+			<block type="neopixel_begin_maqueen"></block>
+			<block type="neopixel_setpixelcolor">
+				<value name="TARGET">
+					<block type="math_number">
+						<field name="NUM">0</field>
+					</block>
+				</value>
+			</block>
+			<block type="neopixel_custom_setpixelcolor">
+				<value name="TARGET">
+					<block type="math_number">
+						<field name="NUM">0</field>
+					</block>
+				</value>
+				<value name="R">
+					<block type="math_number">
+						<field name="NUM">255</field>
+					</block>
+				</value>
+				<value name="G">
+					<block type="math_number">
+						<field name="NUM">0</field>
+					</block>
+				</value>
+				<value name="B">
+					<block type="math_number">
+						<field name="NUM">0</field>
+					</block>
+				</value>
+			</block>
+			<block type="neopixel_show"></block>
+		</category>
+		<category id="category_jetmole" name="Jet Mole">
+			<block type="mole_move_car">
+				<value name="SPEED">
+					<block type="math_number">
+						<field name="NUM">0</field>
+						</block>
+				</value>
+			</block>
+			<block type="mole_move_motor_L">
+				<value name="SPEED">
+					<block type="math_number">
+						<field name="NUM">0</field>
+						</block>
+				</value>
+			</block>
+			<block type="mole_move_motor_R">
+				<value name="SPEED">
+					<block type="math_number">
+						<field name="NUM">0</field>
+						</block>
+				</value>
+			</block>
+		</category>
+	</category>
+    <category id="category_crawler" name="Web Crawler">
+    	<category id="category_weather" name="World Weather">
+			<block type="weather_fetchWeatherInfo">
+				<value name="CITYID">
+					<block type="text">
+						<field name="TEXT">City ID</field>
+					</block>
+				</value>
+                <value name="KEY">
+					<block type="text">
+						<field name="TEXT">your OpenWeather key</field>
+					</block>
+				</value>
+            </block>
+						<block type="weather_getID"></block>
+            <block type="weather_getID_TW"></block>
+            <block type="weather_getValue"></block>
+        </category>
+	</category>
+	<category id="category_iot" name="IoT">
+		<category id="category_mqtt" name="MQTT">
+			<block type="connect_mqtt">
+				<value name="BROKER">
+					<block type="text">
+						<field name="TEXT"></field>
+					</block>
+				</value>
+				<value name="PORT">
+					<block type="math_number">
+						<field name="NUM">1883</field>
+					</block>
+				</value>
+				<value name="ID">
+					<block type="text">
+						<field name="TEXT"></field>
+					</block>
+				</value>
+				<value name="USERNAME">
+					<block type="text">
+						<field name="TEXT"></field>
+					</block>
+				</value>
+				<value name="PASSWORD">
+					<block type="text">
+						<field name="TEXT"></field>
+					</block>
+				</value>
+			</block>
+			<block type="subscribe_mqtt">
+				<value name="TOPIC">
+					<block type="text">
+						<field name="TEXT"></field>
+					</block>
+				</value>
+			</block>
+			<block type="publish_mqtt">
+				<value name="TOPIC">
+					<block type="text">
+						<field name="TEXT"></field>
+					</block>
+				</value>
+				<value name="MESSAGE">
+					<block type="text">
+						<field name="TEXT"></field>
+					</block>
+				</value>
+			</block>
+			<block type="mqtt_event"></block>
+			<block type="mqtt_received_topic"></block>
+			<block type="mqtt_received_msg"></block>
+			</category>
+			<category id="category_thingspeak" name="ThingSpeak">
+				<block type="things_get_url">
+					<value name="KEY">
+						<block type="text">
+							<field name="TEXT">your ThingSpeak key</field>
+						</block>
+					</value>
+					<value name="FIELD1">
+						<block type="math_number">
+							<field name="NUM">0</field>
+						</block>
+					</value>
+					<value name="FIELD2">
+						<block type="math_number">
+							<field name="NUM">0</field>
+						</block>
+					</value>
+					<value name="FIELD3">
+						<block type="math_number">
+							<field name="NUM">0</field>
+						</block>
+					</value>
+					<value name="FIELD4">
+						<block type="math_number">
+							<field name="NUM">0</field>
+						</block>
+					</value>
+					<value name="FIELD5">
+						<block type="math_number">
+							<field name="NUM">0</field>
+						</block>
+					</value>
+					<value name="FIELD6">
+						<block type="math_number">
+							<field name="NUM">0</field>
+						</block>
+					</value>
+					<value name="FIELD7">
+						<block type="math_number">
+							<field name="NUM">0</field>
+						</block>
+					</value>
+					<value name="FIELD8">
+						<block type="math_number">
+							<field name="NUM">0</field>
+						</block>
+					</value>
+				</block>
+		</category>
+	</category>
+</category>
